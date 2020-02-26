@@ -1,8 +1,6 @@
 
 <a  href="https://prototype.net/">
-
-<img  src="https://assets.website-files.com/5dd6f4bd37726fc1e1193f11/5dd706ff4e896a1d62450375_logo.svg"  alt="Prototype logo"  title="prototype"  align="right"  height="30"  />
-
+	<img  src="https://assets.website-files.com/5dd6f4bd37726fc1e1193f11/5dd706ff4e896a1d62450375_logo.svg"  alt="Prototype logo"  title="prototype"  align="right"  height="30"  />
 </a>
 
   
@@ -15,6 +13,7 @@
 ### Introduction
 
   
+Demo: [Live Demo](http://karohadaf.com/)
 
 After running this project you will see:
 
@@ -46,14 +45,14 @@ Not to mention, you should sign up and sign in to see the details.
   
 
 1. [Installation](#installation)
-4. [Database](#database)
+2. [Database](#database)
 	- [General Ideas](#general-ideas)
 	- [Details Ideas](#detailed-ideas)
-5. [Code overview](#code-overview)
- 	- [Backend flow](#backend-flow)
+3. [Code overview](#code-overview)
 	- [Dependencies](#dependencies)
-	- [CORS](#cors)
-7. [Links](#links)
+ 	- [Backend flow](#backend-flow)
+	- [CORS](#cross-origin-resource-sharing-cors)
+5. [Links](#links)
 
   
 
@@ -67,21 +66,23 @@ The latest version can be installed by cloning the script and running composer t
 
   
 Clone the repository
-
 `git clone git@github.com:roahamgoudarz/starwars-backend.git`
 
 
 Switch to the repository folder
-
 `cd starwars-backend`
 
  
 Install all the dependencies using composer
-
- 
 `composer install`
 
 This will install star-wars backend and the latest dependencies.
+
+<br>
+
+Update configuration of the database
+`vim inc/config.php`
+
 
 ### fronend
 
@@ -162,7 +163,7 @@ This applications has CORS enabled by default on all API endpoints. The default 
   
   
 
-*  [Demo](https://karohadaf.com/)
+*  [Demo](http://karohadaf.com/)
 *  [Prototype](https://prototype.net/)
 *  [Issue tracker](https://github.com/roahamgoudarz/starwars-backend/issues)
 *  [Source code](https://github.com/roahamgoudarz/starwars-backend)
