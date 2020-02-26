@@ -1,0 +1,10 @@
+{
+    "require": {
+        "webonyx/graphql-php": "^0.13.8",
+        "leocavalcante/siler": "^1.0",
+        "overblog/dataloader-php": "^0.5.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "9.0"
+    }
+}
