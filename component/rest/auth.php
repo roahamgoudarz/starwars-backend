@@ -6,7 +6,9 @@ $input = json_decode($rawInput, true);
 $query = $input['query'];
 
 preg_match('#\((.*?)\)#', $query, $args);
-$args = explode(',', $args[1]);
+
+if(isset($args[1])){
+    $args = explode(',', $args[1]);
 
 
 foreach($args as $key=>$value){
@@ -20,20 +22,9 @@ if (strpos($query, 'signUp') !== false) {
     $data = array('signUp'=> $DataLoader->signUp($args));
 }else{
     $data = array('login'=> $DataLoader->login($args));
-
 }
 
-// $mutationFields = [
-//     'signUp' => [
-//         'type' => Type::string(),
-//         'args' => [
-//             'email' => ['type' => Type::string()],
-//             'password' => ['type' => Type::string()],
-//         ],
-//         'resolve' => function ($rootValue, $args) {
-//             global $core;
-//             return $core->signUp($args);
-//         },
-//     ],
-// ];
+}else{
+    $data = array();
+}
 
