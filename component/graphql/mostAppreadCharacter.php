@@ -1,5 +1,9 @@
 <?php
 
+if(!defined('STARWARS')) {
+    die('Direct access not permitted');
+}
+
 use GraphQL\Type\Definition\ObjectType;
 use GraphQL\Type\Definition\Type;
 use GraphQL\Type\Schema;
